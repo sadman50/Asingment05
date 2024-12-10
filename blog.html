@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <!------------------------------- Font-Awesome Link ---------------------------------------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-------------------------------------- Google Font ---------------------------------------------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+    <!-----------------------------------Daisy UI and Tailwind CSS Link-------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!----------------------------------- Tailwind CSS Configuration ---------------------------------->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                primary: '#90C34D',
+                secondary: '#E0DEDA',
+                background: '#E5E5E5',
+              },
+              fontFamily: {
+                
+              },
+            },
+          },
+        };
+    </script>
+</head>
+<body class="bg-gray-50">
+    <section>
+        <!-- Sticky Navbar -->
+        <nav class="navbar bg-secondary sticky top-0 z-50 px-4 md:px-6 py-3 flex items-center justify-between">
+            <!-- Left Section: Blog Button -->
+            <div class="flex-1">
+                <a href="index.html" class="btn btn-ghost bg-primary normal-case text-base md:text-lg text-black font-bold">Home</a>
+            </div>
+            <!-- Center Section: Donate Bangladesh -->
+            <div class="hidden md:flex absolute left-1/2 transform -translate-x-1/2">
+                <div class="flex items-center gap-2">
+                    <img src="/picture/logo.png" alt="Icon" class="w-6 h-6 md:w-8 md:h-8">
+                    <span class="text-sm md:text-lg font-semibold">Donate Bangladesh</span>
+                </div>
+            </div>
+            <!-- Right Section: Donation Amount -->
+            <div class=" flex items-center gap-2 md:gap-1">
+                <span><img src="./img/coin.png" alt=""></span>
+                <span class="text-sm md:text-lg font-semibold text-black"><span id="donation-amount">10000</span> BDT</span>
+            </div>
+        </nav>
+
+        <!-- Accordion Section -->
+        <div class="join join-vertical w-full ml-4 items-center max-w-screen-md mx-auto px-4 md:px-0">
+            
+            <h1 class="text-2xl md:text-3xl mt-7 mb-5 font-bold flex items-center gap-2">
+                Important FAQ
+                <span class="bg-gray-200 text-black rounded-full p-2 flex items-center justify-center w-8 h-8 animate-bounce">
+                    !
+                </span>
+            </h1>
+            <div class="rounded mb-2">
+                <div class="collapse collapse-arrow join-item border border-base-300 mb-2">
+                    <input type="radio" name="my-accordion-4" checked="checked" />
+                    <div class="collapse-title text-lg md:text-xl font-medium">Q1: How does JavaScript handle dynamic content insertion in the DOM?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Answer:JavaScript enables dynamic content insertion in the DOM through methods such as createElement, appendChild, and insertBefore. When you need to add new elements, such as a list item or a button, you can create an element using createElement, set its attributes or content, and then insert it into the DOM tree using methods like appendChild. This allows you to dynamically modify the structure of a webpage based on user interaction or data changes, without needing to reload the entire page.
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border border-base-300 mb-2">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-lg md:text-xl font-medium">Q2: What is the difference between querySelector and querySelectorAll in the DOM?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Both querySelector and querySelectorAll are used to select elements in the DOM using CSS selectors, but they differ in their return values. querySelector returns the first matching element it finds, making it ideal for cases where you only need one element, like selecting a single button or input field. In contrast, querySelectorAll returns a NodeList of all matching elements, even if multiple elements match the selector. This makes querySelectorAll useful when working with lists of elements, such as selecting all the items in a menu or every paragraph on a page.
+                        </p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border border-base-300">
+                    <input type="radio" name="my-accordion-4" />
+                    <div class="collapse-title text-lg md:text-xl font-medium">Q3: How does JavaScript handle event propagation and what is the difference between capturing and bubbling?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Event propagation in JavaScript refers to the way events are handled in the DOM hierarchy, specifically in the phases of capturing, target, and bubbling. In the capturing phase, events are first captured by the outermost elements and then propagate inward. In the bubbling phase, events start at the target element and bubble outward to the root. By default, most events use bubbling, but event listeners can be set to capture events instead by using the capture option in addEventListener. Understanding these phases allows developers to control the flow of events, such as preventing default actions or handling events in a more granular way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./JS/index.js"></script>
+</body>
+</html>
